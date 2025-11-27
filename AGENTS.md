@@ -16,11 +16,11 @@ This document provides comprehensive guidance for AI agents (Claude Code, Codex,
 
 ## Project Overview
 
-**Vibe-on-the-Go** is a multi-component system that enables mobile and web access to Claude Code and Codex with end-to-end encryption. The project consists of three main components:
+**Vibe-on-the-Go** is a multi-component system that enables mobile and web access to Claude Code and Codex with end-to-end encryption. The project consists of three main components, each in its own repository:
 
-- **CLI** (`cli/`) - Command-line wrapper for Claude Code and Codex
-- **Server** (`server/`) - Backend server for encrypted sync (self-hosted)
-- **Mobile** (`mobile/`) - React Native mobile app (iOS, Android, Web)
+- **CLI** ([vibe-cli](https://github.com/SGranquist13/vibe-cli)) - Command-line wrapper for Claude Code and Codex
+- **Server** ([vibe-server](https://github.com/SGranquist13/vibe-server)) - Backend server for encrypted sync (self-hosted)
+- **Mobile** ([vibe-mobile](https://github.com/SGranquist13/vibe-mobile)) - React Native mobile app (iOS, Android, Web)
 
 ### Key Features
 
@@ -63,7 +63,7 @@ This document provides comprehensive guidance for AI agents (Claude Code, Codex,
 - `cli/src/codex/` - Codex integration
 - `cli/src/daemon/` - Background service management
 
-**Documentation**: See [`cli/CLAUDE.md`](cli/CLAUDE.md) for detailed CLI development guidelines.
+**Documentation**: See [vibe-cli/CLAUDE.md](https://github.com/SGranquist13/vibe-cli/blob/main/CLAUDE.md) for detailed CLI development guidelines.
 
 ### 2. Server Component (`server/`)
 
@@ -85,7 +85,7 @@ This document provides comprehensive guidance for AI agents (Claude Code, Codex,
 - `server/sources/storage/` - Database and storage utilities
 - `server/sources/modules/` - Reusable modules
 
-**Documentation**: See [`server/CLAUDE.md`](server/CLAUDE.md) for detailed server development guidelines.
+**Documentation**: See [vibe-server/CLAUDE.md](https://github.com/SGranquist13/vibe-server/blob/main/CLAUDE.md) for detailed server development guidelines.
 
 ### 3. Mobile Component (`mobile/`)
 
@@ -108,7 +108,7 @@ This document provides comprehensive guidance for AI agents (Claude Code, Codex,
 - `mobile/sources/app/` - Screen components
 - `mobile/sources/components/` - Reusable UI components
 
-**Documentation**: See [`mobile/CLAUDE.md`](mobile/CLAUDE.md) for detailed mobile development guidelines.
+**Documentation**: See [vibe-mobile/CLAUDE.md](https://github.com/SGranquist13/vibe-mobile/blob/main/CLAUDE.md) for detailed mobile development guidelines.
 
 ---
 
