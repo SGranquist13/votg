@@ -26,3 +26,8 @@ pnpm-lock.yaml
 
 **/*.log
 .release-notes-temp.md
+
+# Component repositories (now separate repos)
+/cli/
+/mobile/
+/server/
