@@ -9,6 +9,17 @@ Complete step-by-step guide to get the entire application running and test the f
 - Claude Code installed on your computer (for CLI testing)
 - Git Bash or terminal (for Windows)
 
+## Step 0: Clone All Repositories
+
+First, clone all component repositories:
+
+```bash
+git clone https://github.com/SGranquist13/vibe-on-the-go.git
+git clone https://github.com/SGranquist13/vibe-cli.git
+git clone https://github.com/SGranquist13/vibe-mobile.git
+git clone https://github.com/SGranquist13/vibe-server.git
+```
+
 ## Step 1: Start Infrastructure Services
 
 Open a terminal and start PostgreSQL, Redis, and MinIO:
@@ -37,7 +48,7 @@ You should see 3 containers: `vibe-postgres`, `vibe-redis`, and `vibe-minio`
 ### 2.1 Configure Server Environment
 
 ```bash
-cd server
+cd vibe-server
 cp .env.example .env
 ```
 
@@ -66,7 +77,7 @@ VIBE_MASTER_SECRET=your-generated-secret-here
 ### 2.3 Install Dependencies and Migrate Database
 
 ```bash
-cd server
+cd vibe-server
 yarn install
 yarn migrate
 ```
@@ -90,7 +101,7 @@ Open a **new terminal** (keep the server running):
 ### 3.1 Install Dependencies
 
 ```bash
-cd vibe-on-the-go/mobile
+cd vibe-mobile
 yarn install
 ```
 
@@ -140,7 +151,7 @@ Open a **new terminal** (keep server and mobile running):
 ### 4.1 Build the CLI
 
 ```bash
-cd vibe-on-the-go/cli
+cd vibe-cli
 yarn install
 yarn build
 ```
@@ -423,20 +434,20 @@ docker-compose up -d
 
 ### Terminal 2: Server
 ```bash
-cd server
+cd vibe-server
 yarn dev
 ```
 
 ### Terminal 3: Mobile App
 ```bash
-cd mobile
+cd vibe-mobile
 yarn start:local-server
 # Press 'w' for web, 'i' for iOS, 'a' for Android
 ```
 
 ### Terminal 4: CLI
 ```bash
-cd cli
+cd vibe-cli
 yarn build && npm link
 vibe auth login
 vibe claude
