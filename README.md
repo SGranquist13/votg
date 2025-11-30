@@ -12,61 +12,30 @@ This repository contains documentation, infrastructure configuration, and setup 
 
 ## 🚀 Quick Start
 
-See [QUICK_START.md](QUICK_START.md) for complete setup instructions.
+For complete setup instructions, see **[QUICK_START.md](QUICK_START.md)**.
 
-### Prerequisites
+The quickest way to get started:
 
-- Node.js 20+ and npm/yarn
-- Docker and Docker Compose
-- Git
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/SGranquist13/votg.git
+   cd votg
+   ```
 
-### Setup
-
-1. **Clone all component repositories:**
+2. **Clone all component repositories:**
    ```bash
    git clone https://github.com/SGranquist13/vibe-cli.git
    git clone https://github.com/SGranquist13/vibe-mobile.git
    git clone https://github.com/SGranquist13/vibe-server.git
    ```
 
-2. **Start infrastructure services:**
-   ```bash
-   docker-compose up -d
-   ```
-
-3. **Set up and start the server:**
-   ```bash
-   cd vibe-server
-   cp .env.example .env
-   # Edit .env and set VIBE_MASTER_SECRET (generate with: openssl rand -hex 32)
-   yarn install
-   yarn migrate
-   yarn dev
-   ```
-
-4. **Set up and start the mobile app:**
-   ```bash
-   cd vibe-mobile
-   yarn install
-   yarn start:local-server
-   ```
-
-5. **Build and install the CLI:**
-   ```bash
-   cd vibe-cli
-   yarn install
-   yarn build
-   npm link
-   ```
-
-For detailed instructions, see [QUICK_START.md](QUICK_START.md).
+3. **Follow the detailed guide:** See [QUICK_START.md](QUICK_START.md) for step-by-step instructions to set up infrastructure, server, mobile app, and CLI.
 
 ## 📚 Documentation
 
 - **[QUICK_START.md](QUICK_START.md)** - Complete setup and usage guide
 - **[AGENTS.md](AGENTS.md)** - AI agent development guide
 - **[CLAUDE.md](CLAUDE.md)** - Development guidelines
-- **[CLI_SETUP.md](CLI_SETUP.md)** - CLI-specific setup instructions
 - **[START_CHECKLIST.md](START_CHECKLIST.md)** - Quick reference checklist
 
 ## 🏗️ Architecture
