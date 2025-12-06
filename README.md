@@ -70,17 +70,6 @@ The quickest way to get started:
 
 All communication is **end-to-end encrypted**. The server only sees encrypted blobs.
 
-## 🔄 Syncing with Upstream
-
-This repository is a fork of [slopus/happy](https://github.com/slopus/happy). To sync future changes:
-
-```bash
-git fetch upstream
-git merge upstream/main  # Or cherry-pick specific commits
-```
-
-Each component repository also has an `upstream` remote pointing to the original Happy project for selective syncing.
-
 ## 📄 License
 
 MIT License
